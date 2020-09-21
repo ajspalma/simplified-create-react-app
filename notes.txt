@@ -1,4 +1,77 @@
-Webpack
-- webpack
-- wepack-devserver 
-- webpack-cli
+Webpack https://webpack.js.org/ 
+
+- webpack https://www.npmjs.com/package/webpack
+    - is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable 
+        of transforming, bundling, or packaging just about any resource or asset.
+
+- wepack-devserver https://www.npmjs.com/package/webpack-dev-server 
+    - Use webpack with a development server that provides live reloading. This should be used for development only.
+    - It uses webpack-dev-middleware under the hood, which provides fast in-memory access to the webpack assets.
+
+- webpack-cli https://www.npmjs.com/package/webpack-cli
+    - webpack CLI provides a flexible set of commands for developers to increase speed when setting up a custom webpack 
+        project. As of webpack v4, webpack is not expecting a configuration file, but often developers want to create a 
+        more custom webpack configuration based on their use-cases and needs. webpack CLI addresses these needs by providing 
+        a set of tools to improve the setup of custom webpack configuration
+
+
+
+Babel https://babeljs.io/ 
+
+- babel-core https://www.npmjs.com/package/@babel/core
+    - Babel is a JavaScript compiler
+    - Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript 
+        in current and older browsers or environments. Here are the main things Babel can do for you:
+        - Transform syntax
+        - Polyfill features that are missing in your target environment (through @babel/polyfill)
+        - Source code transformations (codemods)
+        - And more! (check out these videos for inspiration)
+
+- babel-loader https://www.npmjs.com/package/babel-loader
+    - This package allows transpiling JavaScript files using Babel and webpack.
+
+- babel-preset-env https://babeljs.io/docs/en/babel-preset-env
+    - is a smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms 
+        (and optionally, browser polyfills) are needed by your target environment(s). This both makes your life easier and 
+        JavaScript bundles smaller!
+
+- babel-preset-stage-2 (not required, just to use some experimental features of javascript)
+    - https://babeljs.io/docs/en/babel-preset-stage-2
+
+- babel-preset-react https://babeljs.io/docs/en/babel-preset-react 
+    - to transpile react syntax or jsx codes
+
+
+
+babel presets and other confugrations can either be placed 
+in package.json files under the babel property for example
+"babel": {
+    "presets": [
+        "env",
+        "stage-2",
+        "react" // if want to transfile react codes
+    ]
+
+}
+
+or in a .babelrc file 
+
+{
+    "presets": [
+        "env", 
+        "stage-2"
+    ]
+}
+
+React https://reactjs.org/ 
+
+- react https://www.npmjs.com/package/react 
+    - React is a JavaScript library for creating user interfaces.
+    - The react package contains only the functionality necessary to define React components. It is typically used 
+        together with a React renderer like react-dom for the web, or react-native for the native environments.
+
+- react-dom https://www.npmjs.com/package/react-dom
+    - React package for working with the DOM.
+    - This package serves as the entry point to the DOM and server renderers for React. It is intended to be paired with 
+        the generic React package, which is shipped as react to npm.
+
